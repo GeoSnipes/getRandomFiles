@@ -5,7 +5,8 @@ from shutil import copy2
 
 def getFiles(directory):
     count = 0
-    files = os.listdir(directory)
+    files = os.listdir(directory)   
+    #takes 3 files from each folder
     while count < 3:
         randomNum = randint(0, len(files)-1)
         copy2(directory + "\\" + files[randomNum],"D:\\Users\\Geovanni\\Downloads\\food-101.tar\\food-101\\food")
