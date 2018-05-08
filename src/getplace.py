@@ -1,7 +1,9 @@
 """Note, this was built taking into account the base input folder only contains other folders """
+"""Take a subset of files within a sub directory"""
 import os
 from random import randint
 from shutil import copy2, move
+import folder_paths
 
 def getFiles(base, source, folder):
     count = 0
@@ -16,6 +18,6 @@ def getFiles(base, source, folder):
         count+=1
 
 
-base = "D:\\Users\\Geovanni\\Downloads\\food-101.tar\\food-101" #hardcoded here, use sys.argv or your own implementation to be more dynamic
+base = folder_paths.getplacePATH1 #hardcoded here, use sys.argv or your own implementation to be more dynamic
 for folder in os.listdir(base+"\\images"):
     getFiles(base, base+"\\images\\"+folder,folder)
